@@ -1,0 +1,23 @@
+;; Die ersten drei Zeilen dieser Datei wurden von DrRacket eingefügt. Sie enthalten Metadaten
+;; über die Sprachebene dieser Datei in einer Form, die DrRacket verarbeiten kann.
+#reader(lib "vanilla-reader.rkt" "deinprogramm" "sdp")((modname A07_2) (read-case-sensitive #f) (teachpacks ((lib "image.rkt" "teachpack" "deinprogramm" "sdp") (lib "universe.rkt" "teachpack" "deinprogramm" "sdp"))) (deinprogramm-settings #(#f write repeating-decimal #f #t none explicit #f ((lib "image.rkt" "teachpack" "deinprogramm" "sdp") (lib "universe.rkt" "teachpack" "deinprogramm" "sdp")))))
+; Assignment 07
+
+; Aufgabe 02
+
+; ----------------------------------------------------------------
+; a)
+
+; bildet die Summe aller Elemente in xs
+; (: sum ((list-of number) -> number))
+; (check-expect (sum (list 1 2 3)) 6) 
+
+
+
+
+; ----------------------------------------------------------------
+; b)
+
+; multipliziert alle Elemente von xs mit der Zahl x
+;(: mult (number (list-of number) -> (list-of number)))
+; (check-expect (mult 3 (list 1 2 3)) (list 3 6 9))
