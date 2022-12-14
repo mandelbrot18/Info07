@@ -10,38 +10,12 @@
 
 ;(: split-list ((list-of %a) -> (tuple-of (list-of %a) (list-of %a))))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+(define split-list
+(lambda (xs)
+(match
+(empty empty)
+((cons x empty) (make-tuple (cons x empty) empty))
+((cons x xs)    (make-tuple (cons x (split-list xs) (cons x (split-list xs)))))))
 
 
 
@@ -55,11 +29,6 @@
 (: make-tuple (%a %a -> (tuple-of %a %a)))
 (: tuple-fst ((tuple-of %a) -> %a))
 (: tuple-snd ((tuple-of %a) -> %a))
-;(check-expect (make-tuple (list 18 10) (list 2001)) (tuple-of (list 18 10) (list 2001)))
-
-(check-expect (make-tuple 18 10) (make-tuple 18 10))
-;(check-expect (tuple-of 18 10) (make-tuple 18 10))
-
 (define-record (tuple-of t1 t2) 
   make-tuple
   tuple?
